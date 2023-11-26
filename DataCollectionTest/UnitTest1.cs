@@ -6,6 +6,7 @@ namespace DataCollectionTest
         [TestMethod]
         public void TestMethod1()
         {
+            Assert.IsTrue(false);
         }
     }
 }
