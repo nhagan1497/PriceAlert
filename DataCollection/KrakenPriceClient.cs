@@ -38,7 +38,14 @@ namespace DataCollection
             // Access the dollar value (assuming it's the first element in the c array)
             var dollarValue = cArray.First().GetString();
 
-            return decimal.Parse(dollarValue!);
+            try
+            {
+                return decimal.Parse(dollarValue!);
+            }
+            catch
+            {
+                return -1m;
+            }
         }
 
         private static async Task<string> QueryPublicEndpoint(string endpointName, string inputParameters)
