@@ -1,6 +1,0 @@
-@DataAnalyzerAPI_HostAddress = http://localhost:5049
-
-GET {{DataAnalyzerAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

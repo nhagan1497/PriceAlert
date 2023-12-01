@@ -1,13 +1,10 @@
-using Microsoft.EntityFrameworkCore;
-using WebApp.Data;
+using PriceAlertLibrary.DatabaseHelper;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
-builder.Services.AddDbContext<PriceAlertContext>(
-    o => o.UseNpgsql(builder.Configuration.GetConnectionString("AlertDb")));
+builder.Services.AddDbContext<PriceAlertDbContext>();
 
 var app = builder.Build();
 
