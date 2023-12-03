@@ -15,7 +15,7 @@ namespace PriceAlertLibrary.DatabaseHelper
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql(
-                "Host=localhost:5432;Username=price;Password=price;Database=PriceAlert");
+                "Host=price-alert-db.postgres.database.azure.com;Port=5432;Username=price;Password=price;Database=pricealert");
         }
 
         public DbSet<BitcoinPrice> BitcoinPrices { get; set; }
