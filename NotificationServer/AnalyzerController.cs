@@ -23,7 +23,23 @@ namespace NotificationServer
 
             return Ok("Alerts sent!");
         }
+
+
     }
 
-    
+    [Route("api/metrics")]
+    [ApiController]
+    public class MetricsController : ControllerBase
+    {
+
+        [HttpGet("health")]
+        public IActionResult Get()
+        {
+            return Ok();
+        }
+
+
+    }
+
+
 }
